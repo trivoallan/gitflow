@@ -350,10 +350,14 @@ cmd_publish() {
 	git config "branch.$BRANCH.merge" "refs/heads/$BRANCH"
 	git checkout "$BRANCH"
 
+	# publish review request
+	post-review --guess-summary --guess-description --parent=develop --publish --branch=$BRANCH --tracking-branch=origin/develop
+
 	echo
 	echo "Summary of actions:"
 	echo "- A new remote branch '$BRANCH' was created"
 	echo "- The local branch '$BRANCH' was configured to track the remote branch"
+	echo "- A review request has been created"
 	echo "- You are now on branch '$BRANCH'"
 	echo
 }
