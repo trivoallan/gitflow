@@ -3,7 +3,7 @@
 # repository operations for Vincent Driessen's branching model.
 #
 # Original blog post presenting this model is found at:
-#    http://nvie.com/archives/323
+#    http://nvie.com/git-model
 #
 # Feel free to contribute to this project at:
 #    http://github.com/nvie/gitflow
@@ -36,7 +36,7 @@
 # policies, either expressed or implied, of Vincent Driessen.
 #
 
-GITFLOW_VERSION=0.2.1
+GITFLOW_VERSION=0.3-dev
 
 usage() {
 	echo "usage: git flow version"

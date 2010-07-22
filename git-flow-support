@@ -3,7 +3,7 @@
 # repository operations for Vincent Driessen's branching model.
 #
 # Original blog post presenting this model is found at:
-#    http://nvie.com/archives/323
+#    http://nvie.com/git-model
 #
 # Feel free to contribute to this project at:
 #    http://github.com/nvie/gitflow
@@ -156,7 +156,7 @@ require_base_is_on_master() {
 }
 
 cmd_start() {
-	DEFINE_boolean fetch true "fetch from $ORIGIN before performing finish" F
+	DEFINE_boolean fetch false "fetch from $ORIGIN before performing finish" F
 	parse_args "$@"
 	require_version_arg
 	require_base_arg
